@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 32,
+  "spacing": 4,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": [
+    "network",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "clock#date",
+    "clock",
+    "battery",
+    "tray"
+  ],
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip": false,
+    "format": "  {:%H:%M}"
+  },
+  "clock#date": {
+    "format": "   {:%a %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+        "󪥖",
+        "󪥝",
+        "󪥞",
+        "󪥞",
+        "󪥟"
+      ]
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": "  {used:0.2f}G"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  muted",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/logo": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  }
+}

@@ -1,0 +1,11 @@
+window#waybar{
+	background-color: rgba(0,0,0,0.5);
+}
+*{
+    color: white;
+}
+
+#clock, #blacklight, #memory, #network, #pulseaudio,#battery, #tray {
+    padding: 0 5px;
+    margin: 0 5px;
+}
