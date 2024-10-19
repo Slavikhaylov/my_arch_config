@@ -16,6 +16,8 @@
     "pulseaudio",
     "clock#date",
     "clock",
+    "hyprland/language",
+    "temperature",
     "battery",
     "tray"
   ],
@@ -63,6 +65,15 @@
         "󪥞",
         "󪥟"
       ]
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-ru": "🇷🇺",
+    "format-en": "🇺🇸",
+    "keyboard-name": "at-translated-set-2-keyboard"
+  },
+   "temperature": {
+	"format": "{temperatureC}°C "
   },
   "cpu": {
     "format": "  {usage}%",
